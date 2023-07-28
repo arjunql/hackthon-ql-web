@@ -14,4 +14,7 @@ export class HeaderComponent {
     this.router.navigate(['auth/login-donor'])
   }
   
+  navigate(){
+    this.router.navigate(['about-us'])
+  }
 }
