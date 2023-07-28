@@ -1,0 +1,262 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('../src/assets/fonts/GothamBold.eot');
+    src: url('../src/assets/fonts/GothamBold.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/GothamBold.woff') format('woff'),
+      url('../src/assets/fonts/GothamBold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'GothamBoldItalic';
+    src: url('../src/assets/fonts/GothamBoldItalic.eot');
+    src: url('../src/assets/fonts/GothamBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/GothamBoldItalic.woff') format('woff'),
+      url('../src/assets/fonts/GothamBoldItalic.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'GothamUltra';
+    src: url('../src/assets/fonts/GothamUltra.eot');
+    src: url('../src/assets/fonts/GothamUltra.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Gotham-Ultra.woff') format('woff'),
+      url('../src/assets/fonts/gotham-ultra.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'GothamLight';
+    src: url('../src/assets/fonts/Gotham-Light.eot');
+    src: url('../src/assets/fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Gotham-Light.woff') format('woff'),
+      url('../src/assets/fonts/GothamLight.ttf') format('truetype');
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: 'GothamLightItalic';
+    src: url('../src/assets/fonts/Gotham-LightItalic.eot');
+    src: url('../src/assets/fonts/Gotham-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Gotham-LightItalic.woff') format('woff'),
+      url('../src/assets/fonts/GothamLightItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'GothamMedium';
+    src: url('../src/assets/fonts/Gotham-Medium.eot');
+    src: url('../src/assets/fonts/Gotham-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Gotham-Medium.woff') format('woff'),
+      url('../src/assets/fonts/GothamMedium.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'GothamMediumItalic';
+    src: url('../src/assets/fonts/Gotham-MediumItalic.eot');
+    src: url('../src/assets/fonts/Gotham-MediumItalic.eot?#iefix')
+        format('embedded-opentype'),
+      url('../src/assets/fonts/Gotham-MediumItalic.woff') format('woff'),
+      url('../src/assets/fonts/GothamMediumItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'GothamBook';
+    src: url('../src/assets/fonts/Gotham-Book.eot');
+    src: url('../src/assets/fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Gotham-Book.woff') format('woff'),
+      url('../src/assets/fonts/GothamBook.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Moscato-Script';
+    src: url('../src/assets/fonts/Moscato-Script.otf');
+  }
+  
+  @font-face {
+    font-family: 'Giordano';
+    src: url('../src/assets/fonts/Giordano.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Avenir-Next-Condensed';
+    src: url('../src/assets/fonts/Avenir-Next-Condensed-Bold.eot');
+    src: url('../src/assets/fonts/Avenir-Next-Condensed-Bold.eot?#iefix')
+        format('embedded-opentype'),
+      url('../src/assets/fonts/Avenir-Next-Condensed-Bold.woff') format('woff'),
+      url('../src/assets/fonts/Avenir-Next-Condensed-Bold.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'GothamRegular';
+    src: url('../src/assets/fonts/GothamRegular.eot');
+    src: url('../src/assets/fonts/GothamRegular.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/GothamRegular.woff') format('woff'),
+      url('../src/assets/fonts/GothamRegular.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Mada-Bold';
+    src: url('../src/assets/fonts/Mada-Bold.ttf.eot');
+    src: url('../src/assets/fonts/Mada-Bold.ttf.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Mada-Bold.woff') format('woff'),
+      url('../src/assets/fonts/Mada-Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Boska-Medium';
+    src: url('../src/assets/fonts/Boska-Medium.woff2') format('woff2'),
+      url('../src/assets/fonts/Boska-Medium.woff') format('woff'),
+      url('../src/assets/fonts/Boska-Medium.otf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Boska-Italic';
+    src: url('../src/assets/fonts/Boska-Italic.eot');
+    src: url('../src/assets/fonts/Boska-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Boska-Italic.woff') format('woff'),
+      url('../src/assets/fonts/Boska-Italic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Boska-Light-Italic';
+    src: url('../src/assets/fonts/Boska-LightItalic.eot');
+    src: url('../src/assets/fonts/Boska-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Boska-LightItalic.woff') format('woff'),
+      url('../src/assets/fonts/Boska-LightItalic.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Boska-Bold';
+    src: url('../src/assets/fonts/Boska-Bold.eot');
+    src: url('../src/assets/fonts/Boska-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Boska-Bold.woff') format('woff'),
+      url('../src/assets/fonts/Boska-Bold.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Boska-Light';
+    src: url('../src/assets/fonts/Boska-Light.eot');
+    src: url('../src/assets/fonts/Boska-Light.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Boska-Light.woff') format('woff'),
+      url('../src/assets/fonts/Boska-Light.ttf') format('truetype');
+  }
+  
+  
+  @font-face {
+    font-family: 'Boska-Regular';
+    src: url('../src/assets/fonts/Boska-Regular.eot');
+    src: url('../src/assets/fonts/Boska-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../src/assets/fonts/Boska-Regular.woff') format('woff'),
+      url('../src/assets/fonts/Boska-Regular.ttf') format('truetype');
+  }
+
+  .Boska-Light {
+    font-family: 'Boska-Light';
+  }
+  .Gotham-Light {
+    font-family: 'GothamLight';
+  }
+  .Gotham-Book {
+    font-family: 'GothamBook';
+  }
+  .Boska-Light-Italic {
+    font-family: 'Boska-Light-Italic';
+  }
+  .Boska-Bold {
+    font-family: 'Boska-Bold';
+  }
+  .Boska {
+    font-family: 'Boska-Medium';
+  }
+  .Boska-Regular {
+    font-family: 'Boska-Regular';
+  }
+
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Gotham';
+  margin: auto;
+}
+.outer-container{
+  height: 100vh;
+}
+ .inner-container{
+  width: 1440px;
+  margin: 0 auto;
+ }
+ .banner{
+  
+ }
+ .navbar-inner-container{
+  p{
+    font-family: 'GothamLight';
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+  }:hover{
+    font-family: 'GothamLightItalic';
+  }
+  button{
+    font-family: 'GothamLight';
+    font-size: 1rem;
+  }
+ }
+/* Glass icon group styles */
+.glass-icon-group {
+  display: flex;
+  gap: 20px;
+  // background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+  padding: 15px;
+  border-radius: 10px;
+  // box-shadow: 
+  //     0 10px 20px rgba(0, 0, 0, 0.1), /* Shadow at the top */
+  //     0 6px 6px rgba(0, 0, 0, 0.08); /* Shadow at the bottom */
+      animation: scrollIcons 20s linear infinite; 
+}
+// @keyframes scrollIcons {
+//   0% {
+//       transform: translateX(0);
+//   }
+//   100% {
+//       transform: translateX(-100%);
+//   }
+// }
+.border-1{
+  border: solid 1px;
+}
+.inset-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.glass-icon {
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 
+      0 6px 10px rgba(0, 0, 0, 0.1), /* Shadow at the top */
+      0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow at the bottom */
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out; /* Add the transition property */
+}
+
+/* Increase the size slightly on hover to make it interactive */
+.glass-icon:hover {
+  transform: scale(1.1);
+}

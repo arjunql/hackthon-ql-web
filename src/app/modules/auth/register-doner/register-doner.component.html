@@ -1,0 +1,47 @@
+<div class="w-full max-w-ls">
+    <form [formGroup]="registerDonorForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" >
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+          Name
+        </label>
+        <input formControlName="name" [ngClass]="{'border-red-500': formErrors?.name}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" (blur)="logValidationErrors()">
+        <p class="text-red-500 text-xs italic" *ngIf="formErrors?.name">{{formErrors?.name}}</p>
+    </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+          Email
+        </label>
+        <input formControlName="email" [ngClass]="{'border-red-500': formErrors?.email}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" (blur)="logValidationErrors()">
+        <p class="text-red-500 text-xs italic" *ngIf="formErrors?.email">{{formErrors?.email}}</p>
+    </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+          Address
+        </label>
+        <input formControlName="address" [ngClass]="{'border-red-500': formErrors?.address}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Address" type="text" placeholder="Address" (blur)="logValidationErrors()">
+        <p class="text-red-500 text-xs italic" *ngIf="formErrors?.address">{{formErrors?.address}}</p>
+    </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="contact">
+          Phone No.
+        </label>
+        <input formControlName="contact" [ngClass]="{'border-red-500': formErrors?.contact}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="contact" type="text" placeholder="Contact" (blur)="logValidationErrors()">
+        <p class="text-red-500 text-xs italic" *ngIf="formErrors?.contact">{{formErrors?.contact}}</p>
+    </div>
+      <div class="mb-6">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          Password
+        </label>
+        <input formControlName="password"  [ngClass]="{'border-red-500': formErrors?.password}" class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************" (blur)="logValidationErrors()">
+        <p class="text-red-500 text-xs italic"  *ngIf="formErrors?.password">{{formErrors?.password}}</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <button (click)="submitRegisterDonorFormData()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" >
+         Register
+        </button>
+        <a (click)="gotoLoginPage()" class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="javascript:void(0);">
+          Login
+        </a>
+      </div>
+    </form>
+  </div>

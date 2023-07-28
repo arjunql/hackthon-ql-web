@@ -1,0 +1,53 @@
+<!-- <div class="w-full max-w-xs">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" [formGroup]="dynamicForm">
+      <ng-container *ngFor="let field of dynamicFields;let i=index">
+        <div class="fields">
+          <div class="mb-4">
+            <input [(ngModel)]="field.key" [ngModelOptions]="{standalone: true}" [id]="keyId" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="{{field.filed_name}}">
+          </div>
+          
+          <div class="mb-4">
+            <input [id]="valId" [ngModelOptions]="{standalone: true}"  [(ngModel)]="field.value" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="{{field.value_name}}">
+          </div>
+          <button type="button" (click)="removeField(i)" style="color: black;">Remove</button>
+        </div>
+
+      </ng-container>
+      <div class="buttons">
+        <button type="button" (click)="addField('', '')" style="color: black;">Add Field</button>
+        <button type="button" (click)="submitFrom()" style="color: black;">Submit</button>
+      </div>
+    </form>
+  </div> -->
+
+
+  <div class="w-full max-w-ls">
+    <form [formGroup]="postFoodDetail" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" >
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+          Name
+        </label>
+        <input formControlName="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Name" (blur)="logValidationErrors()">
+        <p class="text-red-500 text-xs italic" ></p>
+    </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+          Address
+        </label>
+        <input formControlName="address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Address" type="text" placeholder="Address" (blur)="logValidationErrors()">
+        <p class="text-red-500 text-xs italic"></p>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+        Available Time
+      </label>>
+      <p class="text-red-500 text-xs italic" ></p>
+    </div>
+    <div class="mb-4">
+      <select name="" id="" formControlName="food_type">
+        <option value="0">Veg</option>
+        <option value="1">Non-Veg</option>
+      </select>
+    </div>
+  </form>
+  </div>
