@@ -159,6 +159,9 @@
   .Gotham-Light {
     font-family: 'GothamLight';
   }
+  .Gotham-Book {
+    font-family: 'GothamBook';
+  }
   .Boska-Light-Italic {
     font-family: 'Boska-Light-Italic';
   }
@@ -182,14 +185,17 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   font-family: 'Gotham';
-  background-color: black;
-  color: white;
-
   margin: auto;
+}
+.outer-container{
+  height: 100vh;
 }
  .inner-container{
   width: 1440px;
   margin: 0 auto;
+ }
+ .banner{
+  
  }
  .navbar-inner-container{
   p{
@@ -211,9 +217,9 @@ body {
   // background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 
-      0 10px 20px rgba(0, 0, 0, 0.1), /* Shadow at the top */
-      0 6px 6px rgba(0, 0, 0, 0.08); /* Shadow at the bottom */
+  // box-shadow: 
+  //     0 10px 20px rgba(0, 0, 0, 0.1), /* Shadow at the top */
+  //     0 6px 6px rgba(0, 0, 0, 0.08); /* Shadow at the bottom */
       animation: scrollIcons 20s linear infinite; 
 }
 // @keyframes scrollIcons {
