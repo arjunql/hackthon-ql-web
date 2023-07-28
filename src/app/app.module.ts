@@ -7,6 +7,7 @@ import { FooterComponent } from './modules/layout/footer/footer.component';
 import { PostWasteFoodComponent } from './modules/post-waste-food/post-waste-food.component';
 import { PostFoodFormComponent } from './modules/post-waste-food/post-food-form/post-food-form.component';
 import { CardsComponent } from './core/components/cards/cards.component';
+import { LandingDashboardComponent } from './modules/landing-dashboard/landing-dashboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,8 @@ import { CardsComponent } from './core/components/cards/cards.component';
     FooterComponent,
     PostWasteFoodComponent,
     PostFoodFormComponent,
-    CardsComponent
+    CardsComponent,
+    LandingDashboardComponent
   ],
   imports: [
     BrowserModule,
