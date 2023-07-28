@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormBuilder,Validators} from '@angular/forms'
+import { Router } from '@angular/router';
 import { MasterServiceService } from 'src/app/services/master-service.service';
 import { ValidationServiceService } from 'src/app/services/validation-service.service';
 @Component({
@@ -7,11 +8,15 @@ import { ValidationServiceService } from 'src/app/services/validation-service.se
   templateUrl: './login-doner.component.html',
   styleUrls: ['./login-doner.component.scss']
 })
-export class LoginDonerComponent implements OnInit {
+export class LoginDonorComponent implements OnInit {
   loginForm!:FormGroup
   formErrors:any={}
   isFormSubmitted=false
-  constructor(private masterService:MasterServiceService, private _fb:FormBuilder, private _validation:ValidationServiceService){
+  constructor(private masterService:MasterServiceService,
+     private _fb:FormBuilder, 
+     private _validation:ValidationServiceService,
+     private router:Router
+     ){
 
   }
   ngOnInit(): void {
@@ -30,5 +35,9 @@ export class LoginDonerComponent implements OnInit {
       this.masterService.getConstant().registerForm,
       this.isFormSubmitted
     );
+  }
+
+  gotoRegisterPage(){
+    this.router.navigate(['auth/register-donor'])
   }
 }
