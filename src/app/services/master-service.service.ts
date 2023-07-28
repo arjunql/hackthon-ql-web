@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-
+import Constant from '../core/components/Constants/Constants';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MasterServiceService {
-
-  constructor() { }
+  public getConstant() {
+    return new Constant();
+  }
 }
