@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MasterServiceService } from 'src/app/services/master-service.service';
 import { ValidationServiceService } from 'src/app/services/validation-service.service';
 
@@ -15,7 +16,8 @@ export class RegisterDonorComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private masterService: MasterServiceService,
-    private _validation: ValidationServiceService
+    private _validation: ValidationServiceService,
+    private router:Router
   ) {}
   ngOnInit(): void {
     this.intiRegisterForm();
@@ -32,12 +34,12 @@ export class RegisterDonorComponent implements OnInit {
           ),
         ],
       ],
-      email: [
+      phone: [
         '',
         [
           Validators.required,
           Validators.pattern(
-            this.masterService.getConstant().validationRegex.email
+            this.masterService.getConstant().validationRegex.phone
           ),
         ],
       ],
@@ -47,10 +49,7 @@ export class RegisterDonorComponent implements OnInit {
       address: ['', [Validators.required,Validators.pattern(
         this.masterService.getConstant().validationRegex.whiteSpace
       ),]],
-      user_type: [1],
-      contact: ['', [Validators.required,Validators.pattern(
-        this.masterService.getConstant().validationRegex.whiteSpace
-      ),]],
+      user_type: [1]
     });
   }
 
@@ -65,7 +64,9 @@ export class RegisterDonorComponent implements OnInit {
       this.masterService.getConstant().registerForm,
       this.isFormSubmitted
     );
+  }
 
-    console.log(this.formErrors)
+  gotoLoginPage(){
+    this.router.navigate(['auth/login-donor'])
   }
 }
