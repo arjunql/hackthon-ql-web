@@ -5,6 +5,7 @@ import { PostWasteFoodRoutingModule } from './post-waste-food-routing.module';
 import { PostFoodFormComponent } from './post-food-form/post-food-form.component';
 import { PostWasteFoodComponent } from './post-waste-food.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angular-datetime-picker';
+import { DpDatePickerModule } from 'ng2-date-picker';
 
 
 @NgModule({
@@ -14,8 +15,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angul
     PostWasteFoodRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    OwlDateTimeModule,
-    OwlNativeDateTimeModule,
+    DpDatePickerModule
   ]
 })
 export class PostWasteFoodModule { }
