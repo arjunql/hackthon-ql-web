@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from './modules/about-us/about-us.component';
+import { MissionComponent } from './modules/mission/mission.component';
 
 const routes: Routes = [
   {
@@ -13,6 +15,14 @@ const routes: Routes = [
   {
     path:'food-info',
     loadChildren:() => import('./modules/post-waste-food/post-waste-food.module').then(post => post.PostWasteFoodModule)
+  },
+  {
+    path:'about-us',
+    component:AboutUsComponent
+  },
+  {
+    path:'mission',
+    component:MissionComponent
   }
 ];
 

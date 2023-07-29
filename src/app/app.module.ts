@@ -7,13 +7,17 @@ import { FooterComponent } from './modules/layout/footer/footer.component';
 import { CardsComponent } from './core/components/cards/cards.component';
 import { LandingDashboardComponent } from './modules/landing-dashboard/landing-dashboard.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AboutUsComponent } from './modules/about-us/about-us.component';
+import { MissionComponent } from './modules/mission/mission.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     CardsComponent,
-    LandingDashboardComponent
+    LandingDashboardComponent,
+    AboutUsComponent,
+    MissionComponent
   ],
   imports: [
     BrowserModule,
