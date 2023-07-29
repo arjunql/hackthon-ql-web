@@ -21,33 +21,56 @@
   </div> -->
 
 
-  <div class="w-full max-w-ls">
-    <form [formGroup]="postFoodDetail" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" >
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-          Name
-        </label>
-        <input formControlName="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Name" (blur)="logValidationErrors()">
-        <p class="text-red-500 text-xs italic" ></p>
+<div class="w-full max-w-ls" style="width: 50%;
+transform: translate(50%, 20%);">
+  <form [formGroup]="postFoodDetail" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div style="text-align: center;">
+      <h1 style="font-size: 2.5rem;">Fill Food Details</h1>
     </div>
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
-          Address
-        </label>
-        <input formControlName="address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Address" type="text" placeholder="Address" (blur)="logValidationErrors()">
-        <p class="text-red-500 text-xs italic"></p>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+        Name
+      </label>
+      <input formControlName="name"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="username" type="text" placeholder="Name" (blur)="logValidationErrors()">
+      <p class="text-red-500 text-xs italic"></p>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+        Address
+      </label>
+      <input formControlName="address"
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        id="Address" type="text" placeholder="Address" (blur)="logValidationErrors()">
+      <p class="text-red-500 text-xs italic"></p>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="ft">
+        Select Food Type
+      </label>
+      <select name="" id="ft" formControlName="food_type" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        <option value="0" selected>Veg</option>
+        <option value="1">Non-Veg</option>
+        <option value="2">Both</option>
+      </select>
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+        Description
+      </label>
+      <textarea formControlName="description" rows="4" name="comment" id="comment" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+      <p class="text-red-500 text-xs italic"></p>
     </div>
     <div class="mb-4">
       <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
         Available Time
-      </label>>
-      <p class="text-red-500 text-xs italic" ></p>
+      </label>
+      <dp-date-picker (onChange)="changeDate($event)" [config]="datePickerConfig" required="true" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"> </dp-date-picker>
+      <dp-time-select (onChange)="changeTime($event)"></dp-time-select>
+      <p class="text-red-500 text-xs italic"></p>
     </div>
-    <div class="mb-4">
-      <select name="" id="" formControlName="food_type">
-        <option value="0">Veg</option>
-        <option value="1">Non-Veg</option>
-      </select>
-    </div>
+
+    <button (click)="submit()" class="btn">Submit</button>
   </form>
-  </div>
+</div>
